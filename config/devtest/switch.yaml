@@ -1,0 +1,26 @@
+# configuration for San Switch
+---
+- id: 01
+  description: San Switch 01
+  ipaddrs:
+    - 192.168.1.1   # management ip addr 1
+    - 192.168.1.2   # management ip addr 2
+  username: admin   # username of san switch, usually 'admin'
+  password: admin   # password of san switch
+  port: 22          # ssh port
+  context:
+    - 128           # virtual fabric id
+    - 129
+    - 130
+  snmp_args: -v3 -u user  # snmp args for San Switch
+
+- id: 02
+  description: San Switch 02
+  ipaddrs:
+    - 192.168.1.3   # management ip addr 1
+    - 192.168.1.4   # management ip addr 2
+  username: admin   # username of san switch, usually 'admin'
+  password: admin   # password of san switch
+  port: 22          # ssh port
+  # no keyword context for non-virtual fabric
+  snmp_args: -v3 -u user  # snmp args for San Switch

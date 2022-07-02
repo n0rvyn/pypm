@@ -1,0 +1,19 @@
+# Huawei Storage Configuration in Area Devtest
+---
+- id: 01
+  description: Huawei Storage1
+  ipaddrs:
+    - 192.168.1.1  # management ip addr1
+    - 192.168.1.2  # management ip addr2
+  username: admin  # username of storage cli
+  password: admin  # password of storage cli
+  snmp_args: -v3 -u user  # snmp args of storage, username should be changed to your own.
+
+- id: 02
+  description: Huawei Storage2
+  ipaddrs:
+    - 192.168.1.3  # management ip addr1
+    - 192.168.1.4  # management ip addr2
+  username: admin  # username of storage cli
+  password: admin  # password of storage cli
+  snmp_args: -v3 -u user  # snmp args of storage, username should be changed to your own.
